@@ -34,7 +34,7 @@ class CategoryList extends React.Component {
         <div className="row">
           <div className="col">
             <h4>Spirit</h4>
-            <h6>Mood Sclae (0-10)</h6>
+            <h6>Mood Scale (0-10)</h6>
             <br/>
             <br/>
             <br/>
