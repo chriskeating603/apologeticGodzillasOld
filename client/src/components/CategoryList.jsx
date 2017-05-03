@@ -1,7 +1,4 @@
 import React from 'react';
-// import Mind from './Mind.jsx';
-// import Body from './Body.jsx';
-// import Spirit from './Spirit.jsx';
 
 class CategoryList extends React.Component {
   constructor(props) {
