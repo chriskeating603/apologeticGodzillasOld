@@ -17,3 +17,6 @@ create table entries (
   users_id int(2),
   foreign key users_id references users(id)
 );
+
+ -- To run, enter the following in the Terminal:
+ -- mysql -u root < server/schema.sql
