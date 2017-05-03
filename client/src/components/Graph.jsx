@@ -9,7 +9,9 @@ class Graph extends React.Component {
   render() {
     return (
       <div>
-        GRAPHS
+        GRAPHS HERE
+        <br />
+        <a href="http://placehold.it"><img src="http://placehold.it/800x500"/></a>
       </div>
     )
   }

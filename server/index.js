@@ -10,7 +10,9 @@ var app = express();
 
 // middleware that accepts only url Encoded files down server
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static('./'))
 app.use(express.static(__dirname + '/../client/dist'));
+
 
 app.get('/', function (req, res) {
   res.status(200);
