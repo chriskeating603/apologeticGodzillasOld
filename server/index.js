@@ -9,9 +9,10 @@ var app = express();
 // import React files;
 
 // middleware that accepts only url Encoded files down server
-app.use(bodyParser.urlEncoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(__dirname + '/../client/dist'));
 
-app.get('??-TO-DO: Client file-??', function (req, res) {
+app.get('/', function (req, res) {
   res.status(200);
   res.json({
     Success: true
@@ -20,7 +21,7 @@ app.get('??-TO-DO: Client file-??', function (req, res) {
     // on success: send data to graph creator or client to display
 });
 
-app.post('??-TO-DO: Client file-??', function (req, res) {
+app.post('/users', function (req, res) {
   res.status(201)
   res.json({
     Success: true
