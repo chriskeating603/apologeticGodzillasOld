@@ -15,19 +15,9 @@ create table entries (
   minsExercise int(2),
   mood int(2),
   users_id int(2),
-<<<<<<< HEAD
   foreign key (users_id) references users(id)
 );
 
-=======
-<<<<<<< HEAD
-  foreign key users_id references users(id)
-);
 
  -- To run, enter the following in the Terminal:
  -- mysql -u root < server/schema.sql
-=======
-  foreign key (users_id) references users(id)
-);
->>>>>>> creates queries and uses them in server listeners. fixes schema. needs testing of queries
->>>>>>> updates queries, INSERT works and SELECT almost works
