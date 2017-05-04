@@ -34,7 +34,7 @@ app.get('/users/get', function (req, res) {
     // on success: send data to graph creator or client to display
     res.json({
       Success: true,
-      Data: results;
+      Data: results
       // **Need to test results
     });
   });
@@ -48,7 +48,7 @@ app.post('/users/post', function (req, res) {
   // var data = JSON.parse(res.data);
 
   // perform database query to insert user using helper function
-  queries.insertUserData(req.body, function err, results) {
+  queries.insertUserData(req.body, function (err, results) {
     if (err) {
       console.error('User data cannot be inserted into table');
     }
@@ -65,11 +65,11 @@ app.post('/users/post', function (req, res) {
       // on success: send data to graph creator or client to display
       res.json({
         Success: true,
-        Data: results;
+        Data: results
         // **Need to test results
       });
-    };
-  };
+    });
+  });
 });
 
 app.listen(3000, function() {
