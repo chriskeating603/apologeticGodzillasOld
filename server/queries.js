@@ -17,7 +17,9 @@ connection.connection();
 
 
 
+
 // CHECK IF USING SCHEMA HERE IS APPROPRIATE, CONSIDER MAKING CONNECTION FILEc
+
 
 
 connection.query(Schema, function (err, reults, fields) {
