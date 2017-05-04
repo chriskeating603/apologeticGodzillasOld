@@ -21,7 +21,7 @@ Science has demonstrated how everyday stressors produce accumulated impact on ou
 
 ## Usage
 
-> Valence allows each user to simply input his or her data each morning and the user will soon see rendered results of long term trends in lifestyle choices, such as hours of sleeps, time spent exercising, and general mood. Armed with this information, users can make more informed choices and change their lives for the better. 
+> Valence allows each user to simply input his or her data each morning and the user will soon see rendered results of long term trends in lifestyle choices, such as hours of sleep, time spent exercising, and general mood. Armed with this information, users can make more informed choices and change their lives for the better. 
 
 ## Requirements
 
