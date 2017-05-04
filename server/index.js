@@ -69,7 +69,7 @@ app.post('/users/post', function (req, res) {
         // **Need to test results
       });
     };
-  }
+  };
 });
 
 app.listen(3000, function() {
