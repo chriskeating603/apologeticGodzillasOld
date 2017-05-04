@@ -1,17 +1,22 @@
 var mysql = require('mysql');
+
 // var Schema = require('../database/schema.sql');
+
 
 var connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
   database: 'valence'
+
 })
 
 
 connection.connection();
 
+
 // CHECK IF USING SCHEMA HERE IS APPROPRIATE, CONSIDER MAKING CONNECTION FILEc
+
 connection.query(Schema, function (err, reults, fields) {
   if (err) {
     console.error('Schema did not load', err);
