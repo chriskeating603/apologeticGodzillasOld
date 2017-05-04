@@ -15,22 +15,21 @@ app.use(express.static('./'))
 app.use(express.static(__dirname + '/../client/dist'));
 
 
-<<<<<<< HEAD
-=======
 // "Parses the text as JSON and exposes the resulting object on req.body.""
 // **Might be unncessary
 app.use(bodyParser.json());
 
 
->>>>>>> creates queries and uses them in server listeners. fixes schema. needs testing of queries
 app.get('/', function (req, res) {
   res.status(200);
   res.json({
     Success: true
   });
+  
   // perform database query to select all data for user using helper function
   // that is same as POST listener function
-  var data = JSON.parse(res.data);
+
+  // var data = JSON.parse(res.data);
   // *** NEED TO CHECK IF DATA.USERNAME WORKS FOR GET REQUEST
   queries.selectUserData('TO_DO: username' function (err, results) {
     if (err) {
@@ -51,8 +50,10 @@ app.post('/users', function (req, res) {
   res.json({
     Success: true
   });
+
   // perform database query to insert user using helper function
-  var data = JSON.parse(res.data);
+
+  // var data = JSON.parse(res.data);
   queries.insertUserData('TO_DO: data object', function err, results) {
     if (err) {
       console.error('User data cannot be inserted into table');
