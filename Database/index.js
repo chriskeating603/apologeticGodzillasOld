@@ -7,14 +7,6 @@ var mysqlConnection = mysql.createConnection({
   database: 'valence'
 })
 
-var returnEntries = function (cb) {
-  connection.query('select * from entries', function (err, results) {
-    if (err) {
-      cb(err,null)
-    } else {
-      cb(null, results)
-    }
-  })
-}
+mysqlConnection.connection();
 
-module.exports.returnEntries = returnEntries;
+module.exports = mysqlConnection;

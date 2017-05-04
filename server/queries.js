@@ -1,34 +1,15 @@
 var mysql = require('mysql');
+var connection = require('../database/index.js')
 
 
-// var Schema = require('../database/schema.sql');
+// connection.query(Schema, function (err, reults, fields) {
+//   if (err) {
+//     console.error('Schema did not load', err);
+//   } else {
+//     console.log('Schema loaded!')
+//   }
+// });
 
-var connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'valence'
-
-
-})
-
-
-connection.connection();
-
-
-
-
-// CHECK IF USING SCHEMA HERE IS APPROPRIATE, CONSIDER MAKING CONNECTION FILEc
-
-
-
-connection.query(Schema, function (err, reults, fields) {
-  if (err) {
-    console.error('Schema did not load', err);
-  } else {
-    console.log('Schema loaded!')
-  }
-});
 
 // may need to refactor name select depending on data stream
 modular.exports = {
@@ -38,7 +19,7 @@ modular.exports = {
     connection.query(
     `SELECT entries.* FROM entries, users WHERE
     entries.users_id IN
-    (SELECT id FROM users WHERE username = ${name}
+    (SELECT id FROM users WHERE username = ${data.name}
     )`, function (err, results, fields) {
       if (err) {
         callback(err, null);
@@ -52,7 +33,7 @@ modular.exports = {
   insertUserData: function (data, callback) {
     connection.query(
     `INSERT INTO entries (sleepHrs, minsExercise, mood, users_ID) VALUES
-    (${data.sleepHrs}, ${data.exerciseMins}, ${data.moodLeveliu}, ${data.username})
+    (${data.mind}, ${data.body}, ${data.soul}, ${data.name})
     `), function (err, results, fields) {
       if (err) {
         callback(err, null);
@@ -62,4 +43,13 @@ modular.exports = {
     });
   };
 
-}
+  returnEntries: function (callback) {
+    connection.query('select * from entries', function (err, results) {
+      if (err) {
+        callback(err, null);
+      } else {
+        callback(null, results);
+      }
+    });
+  };
+};
