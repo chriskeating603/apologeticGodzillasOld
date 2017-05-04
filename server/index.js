@@ -16,9 +16,13 @@ app.use(express.static(__dirname + '/../client/dist'));
 
 
 
+
+
 // "Parses the text as JSON and exposes the resulting object on req.body.""
 // **Might be unncessary
 app.use(bodyParser.json());
+
+
 
 
 
@@ -29,9 +33,13 @@ app.get('/', function (req, res) {
   });
 
 
+
   // perform database query to select all data for user using helper function
   // that is same as POST listener function
-<<<<<<< HEAD
+
+
+  // perform database query to select all data for user using helper function
+  // that is same as POST listener function
 
   // var data = JSON.parse(res.data);
   // *** NEED TO CHECK IF DATA.USERNAME WORKS FOR GET REQUEST
@@ -56,6 +64,8 @@ app.post('/users', function (req, res) {
   });
 
   // perform database query to insert user using helper function
+
+
   // var data = JSON.parse(res.data);
   queries.insertUserData('TO_DO: data object', function err, results) {
     if (err) {
