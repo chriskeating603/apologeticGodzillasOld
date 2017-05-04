@@ -15,47 +15,33 @@ app.use(express.static('./'))
 app.use(express.static(__dirname + '/../client/dist'));
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> updates queries, INSERT works and SELECT almost works
+
 // "Parses the text as JSON and exposes the resulting object on req.body.""
 // **Might be unncessary
 app.use(bodyParser.json());
 
 
-<<<<<<< HEAD
-=======
->>>>>>> creates queries and uses them in server listeners. fixes schema. needs testing of queries
->>>>>>> updates queries, INSERT works and SELECT almost works
+
 app.get('/', function (req, res) {
   res.status(200);
   res.json({
     Success: true
   });
-<<<<<<< HEAD
-  
+
+
   // perform database query to select all data for user using helper function
   // that is same as POST listener function
+<<<<<<< HEAD
 
   // var data = JSON.parse(res.data);
   // *** NEED TO CHECK IF DATA.USERNAME WORKS FOR GET REQUEST
-=======
-  // perform database query to select all data for user using helper function
-  // that is same as POST listener function
->>>>>>> updates queries, INSERT works and SELECT almost works
   queries.selectUserData('TO_DO: username' function (err, results) {
     if (err) {
       console.error('User data not selected')
     }
     // on success: send data to graph creator or client to display
     res.json({
-<<<<<<< HEAD
       Success: true,
-=======
-      Sucess: true,
->>>>>>> updates queries, INSERT works and SELECT almost works
       Data: results;
       // **Need to test results
     });
@@ -70,11 +56,7 @@ app.post('/users', function (req, res) {
   });
 
   // perform database query to insert user using helper function
-<<<<<<< HEAD
-
   // var data = JSON.parse(res.data);
-=======
->>>>>>> updates queries, INSERT works and SELECT almost works
   queries.insertUserData('TO_DO: data object', function err, results) {
     if (err) {
       console.error('User data cannot be inserted into table');
