@@ -37,7 +37,7 @@ modular.exports = {
   selectUserData: function (name, callback) {
     connection.query(
     `SELECT entries.* FROM entries, users WHERE
-    entries.users_id =
+    entries.users_id IN
     (SELECT id FROM users WHERE username = ${name}
     )`, function (err, results, fields) {
       if (err) {

@@ -34,8 +34,10 @@ app.get('/', function (req, res) {
 
 
 
+
   // perform database query to select all data for user using helper function
   // that is same as POST listener function
+
 
 
   // perform database query to select all data for user using helper function
@@ -74,7 +76,7 @@ app.post('/users', function (req, res) {
     // on success: perform database query to select all data for user using
     // helper function that is same as GET listener function
     res.json({
-      Sucess: true
+      Success: true
     });
     // on success: send data to graph creator or client to display
     queries.selectUserData('TO_DO: username' function (err, results) {
@@ -83,7 +85,7 @@ app.post('/users', function (req, res) {
       }
       // on success: send data to graph creator or client to display
       res.json({
-        Sucess: true,
+        Success: true,
         Data: results;
         // **Need to test results
       });
